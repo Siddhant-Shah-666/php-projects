@@ -1,0 +1,20 @@
+<?php
+
+            $imgid= $_GET['imgid'];
+       
+            $imgQ = 'SELECT * FROM `images` where id = "$imgid";';
+            $imgResult =mysqli_query($dbconn,$imgQ);
+            
+            $num =mysqli_num_rows($imgResult);
+            while($row = mysqli_fetch_assoc($imgResult)){
+                
+                echo "<div class='imgbox'>
+                          <img src='/Hinata/images/Hinata.jpg' >
+                </div>";
+
+            };
+            
+            
+            
+            ?>
+         
